@@ -79,6 +79,17 @@ pip install package_name
 pip list
 ```
 
+### Creating New Projects/Apps
+```bash
+# Create new Django project (from parent directory)
+django-admin startproject project_name
+
+# Create new app within existing project (from project directory)
+python3 manage.py startapp app_name
+
+# Don't forget to add new apps to INSTALLED_APPS in settings.py
+```
+
 ## Important Notes
 
 - **Always activate the virtual environment** with `source .venv/bin/activate` before running any Python/Django commands
@@ -87,6 +98,7 @@ pip list
 - **Admin panel** available at http://127.0.0.1:8000/admin/
 - **Stop server** with Ctrl+C
 - **Deactivate virtual environment** with `deactivate`
+- **Add new apps** to `INSTALLED_APPS` in `settings.py` after creating them
 
 ## Project Structure
 - `maple/` - Main Django project directory
