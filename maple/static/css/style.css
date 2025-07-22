@@ -17,6 +17,10 @@ h1, p {
     text-align: center;
 }
 
+h1, h2 {
+    font-size: 2.5rem;
+}
+
 .banner {
     display: block;
     width: 100%;
