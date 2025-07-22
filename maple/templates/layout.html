@@ -24,16 +24,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
+                        <a class="nav-link" aria-label="Home" title="Home" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about">About</a>
+                        <a class="nav-link" aria-label="About" title="About" href="/about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'posts:list' %}">Posts</a>
+                        <a class="nav-link" aria-label="Posts" title="Posts" href="{% url 'posts:list' %}">Posts</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'users:register' %}">Register</a>
+                        <a class="nav-link" aria-label="User Registration" title="User Registration" href="{% url 'users:register' %}">Register</a>
                     </li>
                 </ul>
             </div>
