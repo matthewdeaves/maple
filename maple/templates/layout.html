@@ -32,12 +32,29 @@
                     <li class="nav-item">
                         <a class="nav-link" aria-label="Posts" title="Posts" href="{% url 'posts:list' %}">Posts</a>
                     </li>
+
+                    {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link" aria-label="New Post" title="New Post" href="{% url 'posts:new-post' %}">New Post</a>
+                        </li>
+                    {% endif %}
+                    
                     <li class="nav-item">
                         <a class="nav-link" aria-label="User Registration" title="User Registration" href="{% url 'users:register' %}">Register</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-label="User Registration" title="User Login" href="{% url 'users:login' %}">Login</a>
-                    </li>
+
+                    {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <form action="{% url 'users:logout' %}" method="post">
+                                {% csrf_token %}
+                                <button title="User Logout" aria-label="User Logout" >Logout</button>
+                            </form>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" aria-label="User Login" title="User Login" href="{% url 'users:login' %}">Login</a>
+                        </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
