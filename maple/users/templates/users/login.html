@@ -10,7 +10,7 @@
             <div class="card shadow">
                 <div class="card-body">
                     <h2 class="text-center mb-4">Login</h2>
-                    <form class="user-register-form" action="/users/login/" method="post">
+                    <form class="user-register-form" action="{% url 'users:login' %}" method="post">
                         {% csrf_token %}
                         {{ form }}
                         {% if request.GET.next %}
