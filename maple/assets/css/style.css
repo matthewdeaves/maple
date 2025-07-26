@@ -34,8 +34,9 @@
 }
 
 /* User registration form styling */
-.user-register-form input[type="text"],
-.user-register-form input[type="password"] {
+form input[type="text"],
+form textarea,
+form input[type="password"] {
     display: block;
     width: 100%;
     padding: 0.375rem 0.75rem;
@@ -51,8 +52,9 @@
     margin-bottom: 1rem;
 }
 
-.user-register-form input[type="text"]:focus,
-.user-register-form input[type="password"]:focus {
+form input[type="text"]:focus,
+form textarea:focus,
+form input[type="password"]:focus {
     color: #212529;
     background-color: #fff;
     border-color: #86b7fe;
@@ -60,13 +62,13 @@
     box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
-.user-register-form label {
+form label {
     margin-bottom: 0.5rem;
     font-weight: 500;
     color: #212529;
 }
 
-.user-register-form ul.errorlist {
+form ul.errorlist {
     width: 100%;
     margin-top: 0.25rem;
     margin-bottom: 0.5rem;
@@ -76,11 +78,11 @@
     list-style: none;
 }
 
-.user-register-form ul.errorlist li {
+form ul.errorlist li {
     margin-bottom: 0.25rem;
 }
 
-.user-register-form .helptext {
+form .helptext {
     margin-top: 0.25rem;
     font-size: 0.875em;
     color: #6c757d;
